@@ -31,6 +31,7 @@ pipeline{
             steps {
                 echo "Kodun Deploy edildiği aşama"
                 echo "Bu credentials ile deploy ediliyor: ${SERVER_CREDENTIALS}"
+                sh "${SERVER_CREDENTIALS}"
             }
         }
         stage("Monitor"){
