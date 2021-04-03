@@ -1,17 +1,30 @@
 pipeline{
     agent any
-    
     stages{
-        stage("build"){
+        stage("Build"){
             steps{
-                echo "Building..."
+                echo "Kodun build edildiği aşama"
             }
         }
         stage("Test"){
             steps{
-                echo "Testing..."
+                echo "Test aşaması"
+            }
+        }
+        stage("QA"){
+            steps{
+                echo "QA aşaması"
+            }
+        }
+        stage("Deploy"){
+            steps {
+                echo "Kodun Deploy edildiği aşama"
+            }
+        }
+        stage("Monitor"){
+            steps{
+                echo "Kodun Monitorlendiği aşama "
             }
         }
     }
-    
 }
