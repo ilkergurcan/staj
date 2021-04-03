@@ -2,6 +2,7 @@ pipeline{
     agent any
     environment {
         NEW_VERSION = '1.1.2'   
+        SERVER_CREDENTIALS = credentials('server-credentials')
     }
     stages{
         stage("Build"){
@@ -29,6 +30,7 @@ pipeline{
         stage("Deploy"){
             steps {
                 echo "Kodun Deploy edildiği aşama"
+                echo "Bu credentials ile deploy ediliyor: ${SERVER_CREDENTIALS}"
             }
         }
         stage("Monitor"){
