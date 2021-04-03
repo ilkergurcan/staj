@@ -27,4 +27,10 @@ pipeline{
             }
         }
     }
+    
+    post{
+        success{
+            echo "all things went well"   
+        }
+    }
 }
