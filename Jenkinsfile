@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment {
+        NEW_VERSION = '1.1.2'   
+    }
     stages{
         stage("Build"){
             when {
@@ -9,6 +12,7 @@ pipeline{
             }
             steps{
                 echo "Kodun build edildiği aşama"
+                echo "${NEW_VERSION} versiyonu build ediliyor"
             }
             
         }
