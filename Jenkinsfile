@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
         NEW_VERSION = '1.1.2'   
-        SERVER_CREDENTIALS = credentials('server-credentials')
+        SERVER_CREDENTIALS = credentials('Jenkins')
     }
     stages{
         stage("Build"){
