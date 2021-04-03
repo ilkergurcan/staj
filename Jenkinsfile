@@ -31,6 +31,9 @@ pipeline{
             steps {
                 echo "Kodun Deploy edildiği aşama"
                 echo "Bu credentials ile deploy ediliyor: ${SERVER_CREDENTIALS}"
+                withCredentials([usernamePassword(credentials:'Jenkins', usernameVariable: USER, passwordVariable:PWD)]){
+                    echo "sa ${USER} and ${PWD}
+                }
                 
             }
         }
